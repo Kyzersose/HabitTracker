@@ -12,7 +12,7 @@ public final class HabitContract {
     private HabitContract() {}
 
     //Inner class, defines habits table
-    public static final class Habits implements BaseColumns{
+    public static final class Habit implements BaseColumns{
 
         //Table name
         public static final String TABLE_NAME = "habits";
