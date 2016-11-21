@@ -19,7 +19,7 @@ public class HabitActivity extends AppCompatActivity {
         setContentView(R.layout.habit_activity);
     }
 
-    private void insertHabit(){
+    private void insertHabit() {
         // Creates a new DbHelper
         mDbHelper = new HabitDbHelper(this);
 
@@ -33,7 +33,7 @@ public class HabitActivity extends AppCompatActivity {
         values.put(Habit.COLUMN_HABIT_STATUS, 0);
     }
 
-    private void displayDatabseInfo(){
+    public Cursor readAllHabits() {
         //Creates a new DbHelper
         mDbHelper = new HabitDbHelper(this);
 
@@ -56,6 +56,8 @@ public class HabitActivity extends AppCompatActivity {
                 null,
                 null
         );
+
+        return cursor;
 
     }
 }
